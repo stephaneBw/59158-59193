@@ -1,5 +1,4 @@
 import tkinter as tk
-from pathlib import Path
 from tkinter import filedialog
 import subprocess
 
@@ -22,6 +21,7 @@ def browse_file():
 root = tk.Tk()
 root.title("GUI Interface for Scraper Script")
 
+
 # Script Path Label and Entry
 tk.Label(root, text="Enter Script Path: ").pack()
 script_path_entry = tk.Entry(root, width=50)
@@ -34,5 +34,6 @@ browse_button.pack()
 # Run Script Button
 run_button = tk.Button(root, text="Run Scraper Script", command=run_scraper)
 run_button.pack()
+
 
 root.mainloop()
