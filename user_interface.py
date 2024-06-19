@@ -1,9 +1,14 @@
 import tkinter as tk
+from pathlib import Path
 from tkinter import filedialog
 import subprocess
 
+path = 'C:/Users/ostep/PycharmProjects/59158-59193/main.py'
+
+
 def run_scraper():
-    subprocess.run(["python", "your_script_name.py"])
+    subprocess.run(["python", path])
+
 
 def browse_file():
     file_path = filedialog.askopenfilename(initialdir="/", title="Select Script File",
@@ -11,6 +16,7 @@ def browse_file():
     if file_path:
         script_path_entry.delete(0, tk.END)
         script_path_entry.insert(0, file_path)
+
 
 # Create the main application window
 root = tk.Tk()
